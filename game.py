@@ -79,32 +79,20 @@ class Player(Enemy):
         # Check if the inventory is empty
         if iterations == 0: print("Inventory is empty")        
 
-
-# Definitions of entities
-player = Player("Player", 100, 10, 10)
-ak47 = Weapon("ak47", 39)
-soldier = Enemy("Soldier", 100, 10, 10)
-player.obtain_item(ak47)
-player_weapons = {"ak47": ak47}
-
-
-def ask_weapon():
+def ask_weapon(target):
     player.list_inventory()
     choice = input("Enter the weapon you want to use: ")
     if choice.lower() == "exit":
         exit()
     elif choice in player.inventory:
         weapon = player_weapons[choice]
-        target = soldier
         weapon.attack_weapon(target, player)
     else:
         print("You don't have that item")
         ask_weapon()
 
-ask_weapon()
 
-
-
-
-
-
+player = Player("player", 100, 10, 10) # Basic player
+player_weapons = {
+    
+} # Dictionary of weapons, required for the code to work
