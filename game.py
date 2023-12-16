@@ -34,7 +34,7 @@ class Weapon:
         self.damage = damage
     
     def attack_weapon(self, target, user):
-        target.take_damage(self.damage+player.attack)
+        target.take_damage(self.damage+user.attack)
         if target.hp <= 0:
             print(f"{target.name} died")
         else:
