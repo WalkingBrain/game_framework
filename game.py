@@ -99,5 +99,3 @@ class Player(Enemy):
 player_weapons = {
     
 } # Put all weapons here in the format "weapon name": weapon object (ex. "sword": sword) (required for functionality)
-
-
