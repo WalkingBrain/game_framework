@@ -80,17 +80,18 @@ class Player(Enemy):
         if iterations == 0: print("Inventory is empty")        
 
     def ask_weapon(self, target):
-        self.list_inventory()
-        print("Type 'exit' to exit")
-        choice = input("Enter the weapon you want to use: ")
-        if choice.lower() == "exit": # Handles exit logic
-            exit()
-        elif choice in self.inventory:
-            weapon = player_weapons[choice]
-            weapon.attack_weapon(target, self)
-        else:
-            print("You don't have that item")
-            self.ask_weapon()
+        while True:
+            self.list_inventory()
+            print("Type 'exit' to exit")
+            choice = input("Enter the weapon you want to use: ")
+            if choice.lower() == "exit": # Handles exit logic
+                exit()
+            elif choice in self.inventory:
+                weapon = player_weapons[choice]
+                weapon.attack_weapon(target, self)
+            else:
+                print("You don't have that item")
+
 
 
 
