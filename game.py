@@ -79,14 +79,15 @@ class Player(Enemy):
         # Check if the inventory is empty
         if iterations == 0: print("Inventory is empty")        
 
-def ask_weapon(target):
-    player.list_inventory()
+def ask_weapon(user, target):
+    user.list_inventory()
+    print("Type 'exit' to exit")
     choice = input("Enter the weapon you want to use: ")
-    if choice.lower() == "exit":
+    if choice.lower() == "exit": # Handles exit logic
         exit()
-    elif choice in player.inventory:
+    elif choice in user.inventory:
         weapon = player_weapons[choice]
-        weapon.attack_weapon(target, player)
+        weapon.attack_weapon(target, user)
     else:
         print("You don't have that item")
         ask_weapon()
@@ -95,4 +96,6 @@ def ask_weapon(target):
 player = Player("player", 100, 10, 10) # Basic player
 player_weapons = {
     
-} # Dictionary of weapons, required for the code to work
+} # Dictionary of weapons, required for the code to work (Also hardcoded, but changeable if needed)
+
+
