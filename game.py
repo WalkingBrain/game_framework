@@ -95,8 +95,9 @@ class Player(Enemy):
 
 
 
+
 player_weapons = {
     
-} # Dictionary of weapons, required for the code to work (Also hardcoded, but changeable if needed)
+} # Put all weapons here in the format "weapon name": weapon object (ex. "sword": sword) (required for functionality)
 
 
