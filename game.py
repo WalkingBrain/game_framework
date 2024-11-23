@@ -1,3 +1,5 @@
+# DEPRECATED, DO NOT USE, FOR ARCHIVAL PURPOSES ONLY
+
 import random
 class Entity:
     def __init__(self, name, hp,  defense):
