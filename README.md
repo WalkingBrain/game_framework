@@ -1,3 +1,5 @@
 # Framework for my text-based games
 
-Example game I made at https://github.com/WalkingBrain/project-green
+Not updated very often, only gets the major updates that are in my game ---> Example game I made at https://github.com/WalkingBrain/project-green
+
+
